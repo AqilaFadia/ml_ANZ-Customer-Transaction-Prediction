@@ -156,7 +156,6 @@ Table 1. Proportion of distribution of training data and test data
 
 
  |Total # of sample in whole dataset: 9054 |
- 
     | ------ |
     
     |Total # of sample in train dataset: 8148 |
