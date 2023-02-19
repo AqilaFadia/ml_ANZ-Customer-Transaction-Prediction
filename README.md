@@ -72,10 +72,11 @@ Figure 4. Boxplot with Value Amount
 Outliers are samples whose values ​​are very far from the general scope of the main data, are the results of observations that occur very rarely and are different from other observed data. in this experiment it turns out that there are outliers in the ANZ data, then, the action to overcome the outliers is with the equation function:
 
  |Upper limit = Q3 + 1.5 * IQR |
-    | ------ | ------ |
+    | ------ |
+
 
    | Lower limit = Q1 - 1.5 * IQR |
-    | ------ | ------ |
+    | ------ |
 
 * EDA Univariate Analysis
 Furthermore, the process of data analysis using the Univariate EDA technique divides the features in the dataset into two parts, namely numerical features and categorical features. Do an analysis of the category features first.
@@ -151,6 +152,7 @@ Dividing the dataset into training data (train) and test data (test) is what we 
  
 Table 1. Proportion of distribution of training data and test data
 
+
  |Total # of sample in whole dataset: 9054 |
     | ------ | ------ |
     |Total # of sample in train dataset: 8148 |
@@ -198,13 +200,18 @@ let's look at the prediction results using some values ​​from the test data.
 The metric that we will use in this prediction is MSE or Mean Squared Error which calculates the sum of the average squared differences between the true value and the predicted value. MSE is defined in the following equation
 
 ![formula](https://user-images.githubusercontent.com/123156703/215319673-c374edc2-1c5f-486f-93fc-3ff127a2d6f9.jpeg)
+
 Figure 8. Formula for calculating MSE
 
 
 Information:
+
 N = number of datasets
+
 yi = true value
+
 y_pred = predicted value
+
 
 
 When calculating the Mean Squared Error value on the train and test data, we divide it by the value 1e3. It is intended that the mse value is on a scale that is not too large. The evaluation results on the training data and test data are as follows:
