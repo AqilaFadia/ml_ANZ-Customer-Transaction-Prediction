@@ -46,17 +46,29 @@ The variables in the ANZ dataset are as follows:
 
 Performing several steps needed to understand the data, EDA Handles Missing Value, Univariate Analysis, Exploratory Data Analysis - Multivariate Analysis
 * EDA Handles Missing Value
+
 ![pi](https://user-images.githubusercontent.com/123156703/215402738-11befd36-54df-49d0-a0c8-2cb2ee2b4859.png)
+
 Figure 1. NAN values ​​in the datasheet
+
 From the results of pd.read or the results of the describe() function, there are values ​​that need to be deleted in the dataseeet merchant_kode, bpay_biller_code, and card_present_flag using the drop function. then use the Outliers function.
+
 ![outliers](https://user-images.githubusercontent.com/123156703/215409314-e032a12c-f095-4492-bbf4-7db3a85b1078.png)
+
 Figure 2. Boxplot with Value Balance
+
 ![outliers2](https://user-images.githubusercontent.com/123156703/215409317-178a5204-ef31-444c-a4f4-0fbbb31aca34.png)
+
 Figure 3. Boxplot with Age Value
-![outliers2](https://user-images.githubusercontent.com/123156703/215409317-178a5204-ef31-444c-a4f4-0fbbb31aca34.png)
+
+![outliers2](https://user-images.githubusercontent.com/123156703/215409317-178a5204-ef31-444c-a4f4-0fbbb31aca34.png
+
 Figure 4. Boxplot with Value Amount
+
 Outliers are samples whose values ​​are very far from the general scope of the main data, are the results of observations that occur very rarely and are different from other observed data. in this experiment it turns out that there are outliers in the ANZ data, then, the action to overcome the outliers is with the equation function:
- |Upper limit = Q3 + 1.5 * IQR |
+
+
+   |Upper limit = Q3 + 1.5 * IQR |
     | ------ |
 
    | Lower limit = Q1 - 1.5 * IQR |
@@ -64,12 +76,18 @@ Outliers are samples whose values ​​are very far from the general scope of t
 
 * EDA Univariate Analysis
 Furthermore, the process of data analysis using the Univariate EDA technique divides the features in the dataset into two parts, namely numerical features and categorical features. Do an analysis of the category features first.
+
 ![categoricalfeature_status](https://user-images.githubusercontent.com/123156703/215409307-0c087496-0aca-443b-8895-a2df3f44bd8d.png)
 Figure 5. Categorical Features
+
 Based on the conclusion of the description of the variables, there are 2 categories in the number of features authorized more than posted.
+
 ![univariatenumericalfeatures](https://user-images.githubusercontent.com/123156703/215409320-0e960c8a-7340-4809-89c4-edc9bd5d5941.png)
+
 Figure 6. Numerical Features
+
 Meanwhile, in the numerical features category, the increase in amount is proportional to the decrease in the number of samples. We can see this clearly from the "amount" histogram, which graphs decrease as the number of samples (x-axis) increases.
+
 * EDA Multivariate Analysis
 Multivariate EDA shows the relationship between two or more variables in the data. Multivariate EDA which shows the relationship between two variables is commonly referred to as bivariate EDA. Next, perform data analysis on categorical and numeric features.
 In the 'status' feature, it has a fairly large number of differences, namely having a difference of 17 amounts
@@ -90,8 +108,10 @@ the 'country' feature only has one variable, namely the variable with the name o
 on the 'customer_id' feature the highest transaction value reaches 70
 on the 'merchant_long_lat' feature has a stable number of transactions
 in the 'movement' feature there is only a debit variable which is almost 30 amounts
+
 ![corelasi](https://user-images.githubusercontent.com/123156703/215409311-1a11bad3-cb07-4c34-827d-1fad51d5e4bd.png)
 Figure 7. Multivariate Analysis Correlation
+
 An explanation of the correlation relationship between features. The correlation coefficient ranges between -1 and +1. Measures the strength of the relationship between two variables and their direction (positive or negative). Regarding the strength of the relationship between variables, the closer the value is to 1 or -1, the stronger the correlation. Meanwhile, the closer the value is to 0, the weaker the correlation. On the correlation graph, if we observe, the features 'age', 'balance,' amount 'have a fairly close correlation score. Meanwhile, the very low correlation only reached 0.06.
 
 ## Data Preparation
@@ -101,11 +121,13 @@ To carry out the process of encoding category features, one of the common techni
 * Dataset sharing with the train_test_split function from the sklearn library
 Dividing the dataset into training data (train) and test data (test) is what we have to do before creating a model. We need to retain some of the existing data to test how well the model generalizes to the new data. Note that any transformations we perform on data are also part of the model. Because the test data (test set) acts as new data, we need to do all the transformation processes in the training data. This is the reason why the initial step is to split the dataset before doing any transformations. The goal is that we don't pollute the test data with the information we get from the training data. The proportion of training and test data sharing is usually 90:10.
  Result:
+ 
 Table 1. Proportion of distribution of training data and test data
  |Total # of sample in whole dataset: 9054 |
     | ------ |
     |Total # of sample in train dataset: 8148 |
     | Total # of sample in test dataset: 906 |
+    
 * Standardization.
 Standardization is the most commonly used transformation technique in the modeling preparation stage. For numeric features, we will not perform transformations with one-hot-encoding as for category features. We will use the StandardScaler technique from the Scikitlearn library,
 StandardScaler performs the feature standardization process by subtracting the mean (average value) and then dividing it by the standard deviation to shift the distribution. The StandardScaler generates a distribution with a standard deviation of 1 and a mean of 0. About 68% of the values ​​will be between -1 and 1.
@@ -138,15 +160,20 @@ let's look at the prediction results using some values ​​from the test data.
 
 
 The metric that we will use in this prediction is MSE or Mean Squared Error which calculates the sum of the average squared differences between the true value and the predicted value. MSE is defined in the following equation
+
 ![formula](https://user-images.githubusercontent.com/123156703/215319673-c374edc2-1c5f-486f-93fc-3ff127a2d6f9.jpeg)
 Figure 8. Formula for calculating MSE
+
 
 Information:
 N = number of datasets
 yi = true value
 y_pred = predicted value
 
+
 When calculating the Mean Squared Error value on the train and test data, we divide it by the value 1e3. It is intended that the mse value is on a scale that is not too large. The evaluation results on the training data and test data are as follows:
+
+
 
 Table 2. Evaluation results of training data and test data
 |  | train	 | test |   
@@ -154,8 +181,12 @@ Table 2. Evaluation results of training data and test data
 |KNN | 0.260764 | 0.476869
 | RF | 0.239543 | 0.352439
 |Boosting | 0.354629 | 0.369491
+
+
 To test it, make a prediction using some prices from the test data.
 Table 3. Price prediction test results from the datasheet
+
+
 | y_true | 9.93	 |
 | ------ | ------ |
 |prediksi_KNN | 22.0 |
@@ -164,10 +195,14 @@ Table 3. Price prediction test results from the datasheet
 
 
 ## Conclusion
+
 ![evaluasimodel](https://user-images.githubusercontent.com/123156703/215409312-7d4e8582-4dc8-4b08-8418-a75edd84c608.png)
+
 Figure 9. Predictions for each model
 
+
 It can be seen that the prediction with K-Nearest Neighbor (KNN) gives the closest result. To improve performance, do the same thing (setting parameters) for all algorithms used. In addition, perform parameter optimization by applying the Grid Search technique.
+
 
 ## Reference
 [1]	M. Sathye, “Internet Banking in Australia,” SSRN Electron. J., pp. 1996–1998, 2005, doi: 10.2139/ssrn.38222.
