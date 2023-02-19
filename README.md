@@ -54,21 +54,24 @@ Figure 1. NAN values ​​in the datasheet
 From the results of pd.read or the results of the describe() function, there are values ​​that need to be deleted in the dataseeet merchant_kode, bpay_biller_code, and card_present_flag using the drop function. then use the Outliers function.
 
 ![outliers](https://user-images.githubusercontent.com/123156703/215409314-e032a12c-f095-4492-bbf4-7db3a85b1078.png)
+
 Figure 2. Boxplot with Value Balance
 
 
 ![outliers2](https://user-images.githubusercontent.com/123156703/215409317-178a5204-ef31-444c-a4f4-0fbbb31aca34.png)
+
 Figure 3. Boxplot with Age Value
 
 
 ![outliers2](https://user-images.githubusercontent.com/123156703/215409317-178a5204-ef31-444c-a4f4-0fbbb31aca34.png
+
 Figure 4. Boxplot with Value Amount
+
 
 
 Outliers are samples whose values ​​are very far from the general scope of the main data, are the results of observations that occur very rarely and are different from other observed data. in this experiment it turns out that there are outliers in the ANZ data, then, the action to overcome the outliers is with the equation function:
 
-
-   |Upper limit = Q3 + 1.5 * IQR |
+ |Upper limit = Q3 + 1.5 * IQR |
     | ------ |
 
    | Lower limit = Q1 - 1.5 * IQR |
