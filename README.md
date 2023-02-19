@@ -7,7 +7,7 @@ Review the current status of Internet Banking in Australia. about Internet Banki
 ### Problem Statements
 * How to predict customer annual revenue from ANZ read transaction data?
 * Which evaluation model is the most accurate for predicting transaction data from ANZ?
-*
+
 ### Goals
 * Generate target variables for problems & create models that can predict comprehensive customer annual revenue with EDA techniques.
 * Makes some algorithm model recommendations, then tries to find features that will improve the model using the most accurate methodology
@@ -45,7 +45,7 @@ The variables in the ANZ dataset are as follows:
 * gender: the sex of the transaction
 
 Performing several steps needed to understand the data, EDA Handles Missing Value, Univariate Analysis, Exploratory Data Analysis - Multivariate Analysis
-* EDA Menangani Missing Value
+* EDA Handles Missing Value
 ![pi](https://user-images.githubusercontent.com/123156703/215402738-11befd36-54df-49d0-a0c8-2cb2ee2b4859.png)
 Figure 1. NAN values ​​in the datasheet
 From the results of pd.read or the results of the describe() function, there are values ​​that need to be deleted in the dataseeet merchant_kode, bpay_biller_code, and card_present_flag using the drop function. then use the Outliers function.
@@ -56,7 +56,6 @@ Figure 3. Boxplot with Age Value
 ![outliers2](https://user-images.githubusercontent.com/123156703/215409317-178a5204-ef31-444c-a4f4-0fbbb31aca34.png)
 Figure 4. Boxplot with Value Amount
 Outliers are samples whose values ​​are very far from the general scope of the main data, are the results of observations that occur very rarely and are different from other observed data. in this experiment it turns out that there are outliers in the ANZ data, then, the action to overcome the outliers is with the equation function:
-
  |Upper limit = Q3 + 1.5 * IQR |
     | ------ |
 
