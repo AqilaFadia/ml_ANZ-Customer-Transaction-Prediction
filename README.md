@@ -54,16 +54,16 @@ Figure 1. NAN values ​​in the datasheet
 From the results of pd.read or the results of the describe() function, there are values ​​that need to be deleted in the dataseeet merchant_kode, bpay_biller_code, and card_present_flag using the drop function. then use the Outliers function.
 
 ![outliers](https://user-images.githubusercontent.com/123156703/215409314-e032a12c-f095-4492-bbf4-7db3a85b1078.png)
-
 Figure 2. Boxplot with Value Balance
 
-![outliers2](https://user-images.githubusercontent.com/123156703/215409317-178a5204-ef31-444c-a4f4-0fbbb31aca34.png)
 
+![outliers2](https://user-images.githubusercontent.com/123156703/215409317-178a5204-ef31-444c-a4f4-0fbbb31aca34.png)
 Figure 3. Boxplot with Age Value
 
-![outliers2](https://user-images.githubusercontent.com/123156703/215409317-178a5204-ef31-444c-a4f4-0fbbb31aca34.png
 
+![outliers2](https://user-images.githubusercontent.com/123156703/215409317-178a5204-ef31-444c-a4f4-0fbbb31aca34.png
 Figure 4. Boxplot with Value Amount
+
 
 Outliers are samples whose values ​​are very far from the general scope of the main data, are the results of observations that occur very rarely and are different from other observed data. in this experiment it turns out that there are outliers in the ANZ data, then, the action to overcome the outliers is with the equation function:
 
@@ -80,11 +80,13 @@ Furthermore, the process of data analysis using the Univariate EDA technique div
 ![categoricalfeature_status](https://user-images.githubusercontent.com/123156703/215409307-0c087496-0aca-443b-8895-a2df3f44bd8d.png)
 Figure 5. Categorical Features
 
+
 Based on the conclusion of the description of the variables, there are 2 categories in the number of features authorized more than posted.
 
-![univariatenumericalfeatures](https://user-images.githubusercontent.com/123156703/215409320-0e960c8a-7340-4809-89c4-edc9bd5d5941.png)
 
+![univariatenumericalfeatures](https://user-images.githubusercontent.com/123156703/215409320-0e960c8a-7340-4809-89c4-edc9bd5d5941.png)
 Figure 6. Numerical Features
+
 
 Meanwhile, in the numerical features category, the increase in amount is proportional to the decrease in the number of samples. We can see this clearly from the "amount" histogram, which graphs decrease as the number of samples (x-axis) increases.
 
@@ -112,6 +114,7 @@ in the 'movement' feature there is only a debit variable which is almost 30 amou
 ![corelasi](https://user-images.githubusercontent.com/123156703/215409311-1a11bad3-cb07-4c34-827d-1fad51d5e4bd.png)
 Figure 7. Multivariate Analysis Correlation
 
+
 An explanation of the correlation relationship between features. The correlation coefficient ranges between -1 and +1. Measures the strength of the relationship between two variables and their direction (positive or negative). Regarding the strength of the relationship between variables, the closer the value is to 1 or -1, the stronger the correlation. Meanwhile, the closer the value is to 0, the weaker the correlation. On the correlation graph, if we observe, the features 'age', 'balance,' amount 'have a fairly close correlation score. Meanwhile, the very low correlation only reached 0.06.
 
 ## Data Preparation
@@ -123,6 +126,7 @@ Dividing the dataset into training data (train) and test data (test) is what we 
  Result:
  
 Table 1. Proportion of distribution of training data and test data
+
  |Total # of sample in whole dataset: 9054 |
     | ------ |
     |Total # of sample in train dataset: 8148 |
