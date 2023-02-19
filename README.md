@@ -81,6 +81,7 @@ Outliers are samples whose values ​​are very far from the general scope of t
 
  | Batas atas = Q3 + 1.5 * IQR |
 | ------ |
+
  | Batas bawah = Q1 - 1.5 * IQR |
 | ------ |
 
