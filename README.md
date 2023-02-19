@@ -73,10 +73,12 @@ Outliers are samples whose values ​​are very far from the general scope of t
 
 
  |Upper limit = Q3 + 1.5 * IQR |
+ 
     | ------ |
 
 
    | Lower limit = Q1 - 1.5 * IQR |
+   
     | ------ |
 
 * EDA Univariate Analysis
