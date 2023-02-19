@@ -72,12 +72,15 @@ Figure 4. Boxplot with Value Amount
 Outliers are samples whose values ​​are very far from the general scope of the main data, are the results of observations that occur very rarely and are different from other observed data. in this experiment it turns out that there are outliers in the ANZ data, then, the action to overcome the outliers is with the equation function:
 
 
-  |Batas atas = Q3 + 1.5 * IQR |
-    | ------ |
-    
+ | Plugin | README |
+| ------ | ------ |
+| Dropbox | [plugins/dropbox/README.md][PlDb] |
+| GitHub | [plugins/github/README.md][PlGh] |
+| Google Drive | [plugins/googledrive/README.md][PlGd] |
+| OneDrive | [plugins/onedrive/README.md][PlOd] |
+| Medium | [plugins/medium/README.md][PlMe] |
+| Google Analytics | [plugins/googleanalytics/README.md][PlGa] |
 
-   | Batas bawah = Q1 - 1.5 * IQR |
-    | ------ |
 
 * EDA Univariate Analysis
 Furthermore, the process of data analysis using the Univariate EDA technique divides the features in the dataset into two parts, namely numerical features and categorical features. Do an analysis of the category features first.
