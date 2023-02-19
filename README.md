@@ -72,10 +72,12 @@ Figure 4. Boxplot with Value Amount
 Outliers are samples whose values ​​are very far from the general scope of the main data, are the results of observations that occur very rarely and are different from other observed data. in this experiment it turns out that there are outliers in the ANZ data, then, the action to overcome the outliers is with the equation function:
 
  |Upper limit = Q3 + 1.5 * IQR |
+ 
     | ------ |
 
 
    | Lower limit = Q1 - 1.5 * IQR |
+   
     | ------ |
 
 * EDA Univariate Analysis
@@ -154,17 +156,14 @@ Table 1. Proportion of distribution of training data and test data
 
 
  |Total # of sample in whole dataset: 9054 |
+ 
     | ------ |
+    
     |Total # of sample in train dataset: 8148 |
+    
     | Total # of sample in test dataset: 906 |
     
     
-    | y_true | 9.93	 |
-| ------ | ------ |
-|prediksi_KNN | 22.0 |
-| prediksi_RF | 26.8 |
-|prediksi_Boosting | 29.2 |
-
 
 * Standardization.
 Standardization is the most commonly used transformation technique in the modeling preparation stage. For numeric features, we will not perform transformations with one-hot-encoding as for category features. We will use the StandardScaler technique from the Scikitlearn library,
