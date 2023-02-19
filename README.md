@@ -154,13 +154,10 @@ Dividing the dataset into training data (train) and test data (test) is what we 
  
 Table 1. Proportion of distribution of training data and test data
 
-
- |Total # of sample in whole dataset: 9054 |
-    | ------ |
-    
-    |Total # of sample in train dataset: 8148 |
-    
-    | Total # of sample in test dataset: 906 |
+|Total # of sample in whole dataset: 9054 |
+| ------ |
+|Total # of sample in train dataset: 8148 |
+| Total # of sample in test dataset: 906 |
     
     
 
