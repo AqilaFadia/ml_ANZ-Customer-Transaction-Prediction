@@ -79,8 +79,8 @@ Outliers are samples whose values ​​are very far from the general scope of t
     | ------ |
 
 
- | Plugin | README |
-| ------ | ------ |
+ | Batas atas = Q3 + 1.5 * IQR |
+| ------ |
 
 
 * EDA Univariate Analysis
