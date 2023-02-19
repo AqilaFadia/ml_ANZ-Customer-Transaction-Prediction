@@ -154,10 +154,18 @@ Table 1. Proportion of distribution of training data and test data
 
 
  |Total # of sample in whole dataset: 9054 |
-    | ------ | ------ |
+    | ------ |
     |Total # of sample in train dataset: 8148 |
     | Total # of sample in test dataset: 906 |
     
+    
+    | y_true | 9.93	 |
+| ------ | ------ |
+|prediksi_KNN | 22.0 |
+| prediksi_RF | 26.8 |
+|prediksi_Boosting | 29.2 |
+
+
 * Standardization.
 Standardization is the most commonly used transformation technique in the modeling preparation stage. For numeric features, we will not perform transformations with one-hot-encoding as for category features. We will use the StandardScaler technique from the Scikitlearn library,
 StandardScaler performs the feature standardization process by subtracting the mean (average value) and then dividing it by the standard deviation to shift the distribution. The StandardScaler generates a distribution with a standard deviation of 1 and a mean of 0. About 68% of the values ​​will be between -1 and 1.
@@ -249,6 +257,7 @@ It can be seen that the prediction with K-Nearest Neighbor (KNN) gives the close
 
 ## Reference
 [1]	M. Sathye, “Internet Banking in Australia,” SSRN Electron. J., pp. 1996–1998, 2005, doi: 10.2139/ssrn.38222.
+
 [2]	J. Hirst and M. J. Taylor, “The internationalisation of Australian banking: further moves by the ANZ,” Aust. Geogr., vol. 16, no. 4, pp. 291–295, 1985, doi: 10.1080/00049188508702886.
 
 
